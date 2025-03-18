@@ -4,10 +4,10 @@ resource "xenorchestra_vm" "n8n" {
     #cloud_config = xenorchestra_cloud_config.bar.template
     name_label = "n8n-server"
     name_description = "Ubuntu server. Running docker. N8N Server"
-    template = data.xenorchestra_template.template.id
+    template = data.xenorchestra_template.ubuntu.id
 
     # Prefer to run the VM on the primary pool instance
-    #affinity_host = data.xenorchestra_pool.pool.master
+    #affinity_host = data.xenorchestra_pool.testhost.master
     network {
       network_id = data.xenorchestra_network.net.id
     }

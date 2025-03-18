@@ -1,4 +1,4 @@
-data "xenorchestra_template" "template" {
+data "xenorchestra_template" "ubuntu" {
   name_label = "Ubuntu Jammy Jellyfish 22.04"
 }
 data "xenorchestra_pool" "testhost" {
