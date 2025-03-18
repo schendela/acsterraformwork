@@ -7,7 +7,7 @@ resource "xenorchestra_vm" "n8n" {
     template = data.xenorchestra_template.ubuntu.id
 
     # Prefer to run the VM on the primary pool instance
-    #affinity_host = data.xenorchestra_pool.testhost.master
+    affinity_host = data.xenorchestra_pool.testhost.master
     network {
       network_id = data.xenorchestra_network.net.id
     }
