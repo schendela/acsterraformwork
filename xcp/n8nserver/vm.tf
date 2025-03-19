@@ -11,7 +11,7 @@ resource "xenorchestra_vm" "n8n" {
     network {
       network_id = data.xenorchestra_network.net.id
     }
-
+    cdrom = "ubuntu-24.04.1-live-server-amd64.iso"
     disk {
       sr_id = "6f710bd3-cd24-d6ac-f7e9-8c076239172f"
       name_label = "n8nssd"
