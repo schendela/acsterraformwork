@@ -8,3 +8,6 @@ data "xenorchestra_pool" "testhost" {
 data "xenorchestra_network" "net" {
   name_label = "VLAN64"
 }
+data "xenorchestra_vdi" "vdi" {
+  name_label = "ubuntu-24.04.1-live-server-amd64.iso"
+}
