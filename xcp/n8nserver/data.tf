@@ -10,4 +10,5 @@ data "xenorchestra_network" "net" {
 }
 data "xenorchestra_vdi" "vdi" {
   name_label = "ubuntu-24.04.1-live-server-amd64.iso"
+  pool_id = data.xenorchestra_pool.testhost.id
 }
