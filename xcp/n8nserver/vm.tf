@@ -5,7 +5,10 @@ resource "xenorchestra_vm" "n8n" {
     name_label = "n8n-server"
     name_description = "Ubuntu server. Running docker. N8N Server"
     template = data.xenorchestra_template.ubuntu.id
-    cdrom = data.xenorchestra_vdi.vdi.id
+ #   cdrom = data.xenorchestra_vdi.vdi.id
+    cdrom {
+	id = data.xenorchestra_vdi.vdi.id
+}
     # Prefer to run the VM on the primary pool instance
     affinity_host = data.xenorchestra_pool.testhost.master
     network {
