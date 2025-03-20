@@ -1,0 +1,10 @@
+---
+- hosts: servers
+  become: true
+  vars:
+    new_hostname: "n8nserv"
+
+  tasks:
+    - name: Set hostname (hostnamectl)
+      hostname:
+        name: "{{new_hostname}}"
