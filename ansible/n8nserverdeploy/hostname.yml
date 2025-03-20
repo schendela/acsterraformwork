@@ -1,5 +1,5 @@
 ---
-- hosts: servers
+- hosts: all
   become: true
   vars:
     new_hostname: "n8nserv"
@@ -8,3 +8,5 @@
     - name: Set hostname (hostnamectl)
       hostname:
         name: "{{new_hostname}}"
+    - name: Reboot machine
+      reboot:
